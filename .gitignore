@@ -4,6 +4,7 @@ out/
 !**/src/test/**/out/
 .idea
 ActividadE2.3_GonzaloSanchez.iml
+Cine.iml
 package-lock.json
 package.json
 node_modules
