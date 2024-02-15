@@ -12,30 +12,18 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         
         Cine cine = new Cine("CINESA", 300, 3, 7, 7);
-        
-        Pelicula peliculasarray[] = {new Pelicula("EL REY LEON", 120), new Pelicula("TITANIC", 80),  new Pelicula("TORRENTE", 210)};        
+
         int opcion = 0;
-        
-        for (int i = 0; i < peliculasarray.length; i++) {
-			cine.getSalas()[i].setPelicula(peliculasarray[i]);
-			System.out.println(cine.getSalas()[i].getNumeroid());
-			System.out.print(cine.getSalas()[i].getPelicula().getTitulo() + " -> ");
-	        System.out.println(cine.getSalas()[i].getPelicula().getDuracion());
-		}
-        
-    
-
-
 
 
         do {
 
-            System.out.print("CINE\n 1 VER LAS SALAS Y DATOS DE SUS PEL\n 2 ELEGIR SALA Y BUTACA PARA RESERVAR\n 3 VER MATRIZ DE ASIENTOS DE X SALA\n >> ");
+            System.out.print("\nCINE\n 1 VER LAS SALAS Y DATOS DE SUS PEL\n 2 ELEGIR SALA Y BUTACA PARA RESERVAR\n 3 VER MATRIZ DE ASIENTOS DE X SALA\n >> ");
             opcion =  sc.nextInt();
 
             switch (opcion){
                 case 1:
-                    System.out.println("HOLA");
+                    cine.sacarpeliculasalas();
                     break;
 
                 case 2:

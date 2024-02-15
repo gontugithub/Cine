@@ -7,8 +7,10 @@ public class Cine {
     private String nombre;
     private int aforo;
     private Sala[] salas;
+	Pelicula peliculasarray[] = {new Pelicula("EL REY LEON", 120), new Pelicula("TITANIC", 80),  new Pelicula("TORRENTE", 210)};
 
-    public Cine(String nombre, int aforo, int numerosalas, int filas, int columnas) {
+
+	public Cine(String nombre, int aforo, int numerosalas, int filas, int columnas) {
         this.nombre = nombre;
         this.aforo = aforo;
         salas = new Sala[numerosalas];
@@ -48,6 +50,7 @@ public class Cine {
 	}
 
 	public Sala[] getSalas() {
+
 		return salas;
 	}
 
@@ -55,8 +58,13 @@ public class Cine {
 		this.salas = salas;
 	}
 	
-	public Pelicula sacarpeliculasala(int i) {
-		return salas[i].getPelicula();
+	public void sacarpeliculasalas() {
+		for (int i = 0; i<salas.length;i++){
+			getSalas()[i].setPelicula(peliculasarray[i]);
+			System.out.println("SALA " + (i+1));
+			System.out.println("PELICULA; " + getSalas()[i].getPelicula().getTitulo() + "\nDURACION: " + getSalas()[i].getPelicula().getDuracion());
+		}
+
 	}
     
     
