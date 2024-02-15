@@ -33,7 +33,17 @@ public class Cine {
 		return aforo;
 	}
 
+	/**
+	 * El aforo es el número de personas que caben en un cine.
+	 * @param aforo tiene que ser siempre superior a cero e inferior a MAX_CAPACITY, que es la máxima
+	 *              capacidad de nuestros cines. En el caso de que este valor sea introducido de forma
+	 *              incorrecta devolverá un mensaje de error y fijará -1 como valor.
+	 */
 	public void setAforo(int aforo) {
+		if (aforo < 0 || aforo > 1000) {
+			System.out.println("Aforo incorrecto, -1 fijado.");
+			aforo = -1;
+		}
 		this.aforo = aforo;
 	}
 
