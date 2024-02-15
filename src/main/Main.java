@@ -1,12 +1,26 @@
 package main;
 
+import java.util.Arrays;
 import java.util.Scanner;
+
+import clases.Cine;
+import clases.Pelicula;
 
 public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+        
+        Cine cine = new Cine("CINESA", 300, 4, 7, 7);
+        
+        Pelicula peliculasarray[] = {new Pelicula("EL REY LEON", 120)};        
         int opcion = 0;
+        
+        for (int i = 0; i < peliculasarray.length; i++) {
+			cine.getSalas()[i].setPelicula(peliculasarray[i]);
+		}
+        
+        System.out.println(Arrays.toString(cine.getSalas()));
 
 
 

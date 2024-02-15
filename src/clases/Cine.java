@@ -18,4 +18,33 @@ public class Cine {
         	salas[i] = new Sala(i, filas, columnas, null);
         }
     }
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public int getAforo() {
+		return aforo;
+	}
+
+	public void setAforo(int aforo) {
+		this.aforo = aforo;
+	}
+
+	public Sala[] getSalas() {
+		return salas;
+	}
+
+	public void setSalas(Sala[] salas) {
+		this.salas = salas;
+	}
+    
+    
+    
+    
+    
 }
