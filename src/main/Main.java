@@ -27,7 +27,7 @@ public class Main {
                     break;
 
                 case 2:
-                    System.out.println("ADIOS");
+                    cine.verbutacas(1);
                     break;
 
                 case 3:
