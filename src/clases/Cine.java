@@ -1,5 +1,7 @@
 package clases;
 
+import java.util.Arrays;
+
 public class Cine {
 
     private String nombre;
@@ -41,6 +43,10 @@ public class Cine {
 
 	public void setSalas(Sala[] salas) {
 		this.salas = salas;
+	}
+	
+	public Pelicula sacarpeliculasala(int i) {
+		return salas[i].getPelicula();
 	}
     
     

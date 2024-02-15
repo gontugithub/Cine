@@ -11,16 +11,19 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         
-        Cine cine = new Cine("CINESA", 300, 4, 7, 7);
+        Cine cine = new Cine("CINESA", 300, 3, 7, 7);
         
-        Pelicula peliculasarray[] = {new Pelicula("EL REY LEON", 120)};        
+        Pelicula peliculasarray[] = {new Pelicula("EL REY LEON", 120), new Pelicula("TITANIC", 80),  new Pelicula("TORRENTE", 210)};        
         int opcion = 0;
         
         for (int i = 0; i < peliculasarray.length; i++) {
 			cine.getSalas()[i].setPelicula(peliculasarray[i]);
+			System.out.println(cine.getSalas()[i].getNumeroid());
+			System.out.print(cine.getSalas()[i].getPelicula().getTitulo() + " -> ");
+	        System.out.println(cine.getSalas()[i].getPelicula().getDuracion());
 		}
         
-        System.out.println(Arrays.toString(cine.getSalas()));
+    
 
 
 
