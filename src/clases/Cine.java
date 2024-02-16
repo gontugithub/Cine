@@ -68,14 +68,19 @@ public class Cine {
 	}
 
 	public void verbutacas(int sala){
-		System.out.println("\n-PANTALLA-");
-		for(int i = 0; i<getSalas()[sala].getButacas().length;i++){
-			for (int j = 0; j<getSalas()[sala].getButacas()[i].length;j++){
-				System.out.print(getSalas()[sala].getButacas()[i][j]+" ");
+		if (sala < salas.length && sala > 0){
+			System.out.println("\n-PANTALLA-");
+			for(int i = 0; i<getSalas()[sala].getButacas().length;i++){
+				for (int j = 0; j<getSalas()[sala].getButacas()[i].length;j++){
+					System.out.print(getSalas()[sala].getButacas()[i][j]+" ");
+				}
+				System.out.println();
 			}
-			System.out.println();
 
+		} else {
+			System.out.println("SALA NO ENCONTRADA");
 		}
+
 	}
 
 	public void reservarbutacas(int sala, int fila, int columna, String correo){
