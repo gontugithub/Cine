@@ -68,7 +68,7 @@ public class Cine {
 	}
 
 	public void verbutacas(int sala){
-		System.out.println("-PANTALLA-");
+		System.out.println("\n-PANTALLA-");
 		for(int i = 0; i<getSalas()[sala].getButacas().length;i++){
 			for (int j = 0; j<getSalas()[sala].getButacas()[i].length;j++){
 				System.out.print(getSalas()[sala].getButacas()[i][j]+" ");
@@ -76,6 +76,10 @@ public class Cine {
 			System.out.println();
 
 		}
+	}
+
+	public void reservarbutacas(int sala, int fila, int columna, String correo){
+		getSalas()[sala].getButacas()[fila][columna] = correo;
 	}
     
     

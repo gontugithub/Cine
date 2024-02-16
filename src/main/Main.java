@@ -14,6 +14,9 @@ public class Main {
         Cine cine = new Cine("CINESA", 300, 3, 7, 7);
 
         int opcion = 0;
+        String correo;
+        int fila;
+        int columna;
 
 
         do {
@@ -27,6 +30,16 @@ public class Main {
                     break;
 
                 case 2:
+                    System.out.println("INTRODUCE EL CORREO: ");
+                    correo = sc.next();
+                    System.out.println("INTRODUCE LA SALA: ");
+                    opcion = sc.nextInt();
+                    System.out.println("INTRODUCE LA FILA: ");
+                    fila = sc.nextInt();
+                    System.out.println("INTRODUCE LA COLUMNA: ");
+                    columna = sc.nextInt();
+                    cine.reservarbutacas(opcion,fila,columna,correo);
+                    opcion = 2;
                     break;
 
                 case 3:
@@ -34,14 +47,15 @@ public class Main {
                     cine.verbutacas(sc.nextInt());
                     break;
 
+                case 4:
+                    System.out.println("SALIENDO ...");
+                    break;
+
                 default:
                     System.out.println("INTRODUCE UN OPCION DE MENU VALIDA");
                     break;
 
             }
-        } while (opcion != 10);
-
-
-
+        } while (opcion != 4);
     }
 }
