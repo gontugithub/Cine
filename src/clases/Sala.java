@@ -3,12 +3,12 @@ package clases;
 public class Sala {
 
     private int numeroid;
-    private int[][] butacas;
+    private String[][] butacas;
     private Pelicula pelicula;
 
     public Sala(int numeroid,int filas, int columnas, Pelicula Pelicula) {
         this.numeroid = numeroid;
-        butacas = new int[filas][columnas];
+        butacas = new String[filas][columnas];
         this.pelicula = Pelicula;
     }
 
@@ -20,11 +20,11 @@ public class Sala {
 		this.numeroid = numeroid;
 	}
 
-	public int[][] getButacas() {
+	public String[][] getButacas() {
 		return butacas;
 	}
 
-	public void setButacas(int[][] butacas) {
+	public void setButacas(String[][] butacas) {
 		this.butacas = butacas;
 	}
 
