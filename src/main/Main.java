@@ -18,7 +18,7 @@ public class Main {
 
         do {
 
-            System.out.print("\nCINE\n 1 VER LAS SALAS Y DATOS DE SUS PEL\n 2 ELEGIR SALA Y BUTACA PARA RESERVAR\n 3 VER MATRIZ DE ASIENTOS DE X SALA\n >> ");
+            System.out.print("\nCINE\n 1 VER LAS SALAS Y DATOS DE SUS PEL\n 2 ELEGIR SALA Y BUTACA PARA RESERVAR\n 3 VER MATRIZ DE ASIENTOS DE X SALA\n 4 EXIT\n >> ");
             opcion =  sc.nextInt();
 
             switch (opcion){
@@ -27,12 +27,17 @@ public class Main {
                     break;
 
                 case 2:
-                    cine.verbutacas(1);
                     break;
 
                 case 3:
-                    System.out.println("BUENAS");
+                    System.out.print("INTRODUCE LA SALA: ");
+                    cine.verbutacas(sc.nextInt());
                     break;
+
+                default:
+                    System.out.println("INTRODUCE UN OPCION DE MENU VALIDA");
+                    break;
+
             }
         } while (opcion != 10);
 
