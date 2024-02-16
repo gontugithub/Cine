@@ -11,7 +11,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         
-        Cine cine = new Cine("CINESA", 300, 3, 7, 7);
+        Cine cine = new Cine("CINESA", 300, 3, 8, 7);
 
         int opcion = 0;
         String correo;

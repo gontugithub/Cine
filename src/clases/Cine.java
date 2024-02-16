@@ -83,12 +83,18 @@ public class Cine {
 
 	}
 
-	public void reservarbutacas(int sala, int fila, int columna, String correo){
-		getSalas()[sala].getButacas()[fila][columna] = correo;
-	}
-    
-    
-    
-    
-    
-}
+	public void reservarbutacas(int sala, int fila, int columna, String correo) {
+		if (correo.length() != 0){
+			if (sala < salas.length && sala > 0
+					&& fila >= 0 && fila < getSalas()[sala].getButacas().length - 1
+					&& columna >= 0 && columna < getSalas()[sala].getButacas()[sala].length - 1) {
+
+				getSalas()[sala].getButacas()[fila][columna] = correo;
+			} else {
+				System.out.println("DATO INTRODUCIDO INCORRECTO");
+			}
+		} else{
+			System.out.println("NO HAS INTRODUCIDO UN CORREO VALIDO");
+		}
+
+	}}
