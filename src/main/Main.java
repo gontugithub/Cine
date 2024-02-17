@@ -2,6 +2,8 @@ package main;
 import java.util.Scanner;
 import clases.Cine;
 
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -14,10 +16,19 @@ public class Main {
         int fila;
         int columna;
 
+        System.out.println("\n" +
+                "    __  ____  ____     ___ \n" +
+                "   /  ]|    ||    \\   /  _]\n" +
+                "  /  /  |  | |  _  | /  [_ \n" +
+                " /  /   |  | |  |  ||    _]\n" +
+                "/   \\_  |  | |  |  ||   [_ \n" +
+                "\\     | |  | |  |  ||     |\n" +
+                " \\____||____||__|__||_____|\n" +
+                "                           \n");
 
         do {
 
-            System.out.print("\n> "+ cine.getNombre()+" <\n\n 1 VER LAS SALAS Y DATOS DE SUS PELICULAS\n 2 RESERVAR BUTACAS\n 3 VER MATRIZ DE ASIENTOS DISPONIBLES\n 4 EXIT\n >> ");
+            System.out.print("> "+ cine.getNombre()+" <\n\n 1 VER LAS SALAS Y DATOS DE SUS PELICULAS\n 2 RESERVAR BUTACAS\n 3 VER MATRIZ DE ASIENTOS DISPONIBLES\n 4 EXIT\n >> ");
             opcion =  sc.nextInt();
 
             switch (opcion){
@@ -45,7 +56,15 @@ public class Main {
 
                 case 4:
                     System.out.println("SALIENDO ...");
-                    System.out.println("\n MUCHAS GRACIAS POR CONFIAR EN " + cine.getNombre());
+                    System.out.println("\n" +
+                            " ___ ___  __ __    __  __ __   ____  _____      ____  ____    ____    __  ____   ____  _____\n" +
+                            "|   |   ||  |  |  /  ]|  |  | /    |/ ___/     /    ||    \\  /    |  /  ]|    | /    |/ ___/\n" +
+                            "| _   _ ||  |  | /  / |  |  ||  o  (   \\_     |   __||  D  )|  o  | /  /  |  | |  o  (   \\_ \n" +
+                            "|  \\_/  ||  |  |/  /  |  _  ||     |\\__  |    |  |  ||    / |     |/  /   |  | |     |\\__  |\n" +
+                            "|   |   ||  :  /   \\_ |  |  ||  _  |/  \\ |    |  |_ ||    \\ |  _  /   \\_  |  | |  _  |/  \\ |\n" +
+                            "|   |   ||     \\     ||  |  ||  |  |\\    |    |     ||  .  \\|  |  \\     | |  | |  |  |\\    |\n" +
+                            "|___|___| \\__,_|\\____||__|__||__|__| \\___|    |___,_||__|\\_||__|__|\\____||____||__|__| \\___|\n" +
+                            "                                                                                            \nPOR CONFIAR EN " + cine.getNombre());
                     break;
 
                 default:
