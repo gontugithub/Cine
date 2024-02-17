@@ -61,7 +61,7 @@ public class Cine {
 	public void sacarpeliculasalas() {
 		for (int i = 0; i<salas.length;i++){
 			getSalas()[i].setPelicula(peliculasarray[i]);
-			System.out.println("SALA " + (i+1));
+			System.out.println("\nSALA " + (getSalas()[i].getNumeroid()+1));
 			System.out.println("PELICULA; " + getSalas()[i].getPelicula().getTitulo() + "\nDURACION: " + getSalas()[i].getPelicula().getDuracion());
 		}
 

@@ -1,10 +1,6 @@
 package main;
-
-import java.util.Arrays;
 import java.util.Scanner;
-
 import clases.Cine;
-import clases.Pelicula;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,7 +17,7 @@ public class Main {
 
         do {
 
-            System.out.print("\nCINE\n 1 VER LAS SALAS Y DATOS DE SUS PEL\n 2 ELEGIR SALA Y BUTACA PARA RESERVAR\n 3 VER MATRIZ DE ASIENTOS DE X SALA\n 4 EXIT\n >> ");
+            System.out.print("\n> "+ cine.getNombre()+" <\n\n 1 VER LAS SALAS Y DATOS DE SUS PELICULAS\n 2 RESERVAR BUTACAS\n 3 VER MATRIZ DE ASIENTOS DISPONIBLES\n 4 EXIT\n >> ");
             opcion =  sc.nextInt();
 
             switch (opcion){
@@ -49,6 +45,7 @@ public class Main {
 
                 case 4:
                     System.out.println("SALIENDO ...");
+                    System.out.println("\n MUCHAS GRACIAS POR CONFIAR EN " + cine.getNombre());
                     break;
 
                 default:
