@@ -57,6 +57,11 @@ public class Cine {
 	public void setSalas(Sala[] salas) {
 		this.salas = salas;
 	}
+
+	/**
+	 * sacarpeliculasalas muestra todas las peliculas disponibles en el cine,
+	 * muestra en que sala la van a proyectar, el titulo de la pelicula y su duracion
+	 */
 	
 	public void sacarpeliculasalas() {
 		for (int i = 0; i<salas.length;i++){
@@ -66,6 +71,12 @@ public class Cine {
 		}
 
 	}
+	/**
+	 * Ver butacas te muestra la matriz de la sala que le introduzcas.
+	 *
+	 * @param sala tiene que ser siempre un numero mayor que cero y menor o igual que el numero de salas
+	 *			si metes una sala que no es correcta dara error mostrando un mensaje por pantalla "SALA NO ENCONTRADA"
+	 */
 
 	public void verbutacas(int sala){
 		if (sala < salas.length && sala > 0){
@@ -82,6 +93,20 @@ public class Cine {
 		}
 
 	}
+
+	/**
+	 * Te permite reservar una butaca en una sala, para ello necesita introducir estos atributos:
+	 *
+	 * @param sala de tipo int, indica la sala en la que quieres reservar la butaca
+	 * @param fila de tipo int, indica la fila en la que quieres reservar la butaca
+	 * @param columna de tipo int, indica la colummna en la que quieres reservar la butaca
+	 * @param correo de tipo String, guardara su valor en la posición de la matriz donde la butaca se reserve;
+	 *
+	 * @apiNote cualquier dato de los anteriores si es introducido de marena errona se mostrará un mensaje de error
+	 *		en el caso de que la butaca este ocupada, nos mostrara un mensaje de error
+	 *	    si intentamos volver a reservar la misma butaca con el mismo correo nos dira que esta butaca ya la tenemos reservada.
+	 *
+	 */
 
 	public void reservarbutacas(int sala, int fila, int columna, String correo) {
 
