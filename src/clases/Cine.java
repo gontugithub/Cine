@@ -89,7 +89,7 @@ public class Cine {
 			}
 
 		} else {
-			System.out.println("SALA NO ENCONTRADA");
+			System.out.println("\nSALA NO ENCONTRADA\n");
 		}
 
 	}
@@ -116,15 +116,15 @@ public class Cine {
 
 				if(getSalas()[sala].getButacas()[fila][columna] == null){
 					getSalas()[sala].getButacas()[fila][columna] = correo;
-					System.out.println("\nSALA: " + sala+"\nBUTACA RESERVADA: " + fila+"-"+columna +"\nCORREO: "+correo);
+					System.out.println("\nSALA: " + sala+"\nBUTACA RESERVADA: " + fila+"-"+columna +"\nCORREO: "+correo+"\n");
 				} else if (correo.equals(getSalas()[sala].getButacas()[fila][columna])){
-					System.out.println("BUTACA SELECCIONADA YA LA TIENE RESERVDA");
+					System.out.println("\nBUTACA SELECCIONADA YA LA TIENE RESERVDA\n");
 				} else {
-					System.out.println("BUTACA SELECCIONADA OCUPADA");
+					System.out.println("\nBUTACA SELECCIONADA OCUPADA\n");
 				}
 
 			} else {
-				System.out.println("DATO INTRODUCIDO INCORRECTO");
+				System.out.println("\nDATO INTRODUCIDO INCORRECTO\n");
 			}
 
 	}}

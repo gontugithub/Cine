@@ -37,13 +37,13 @@ public class Main {
                     break;
 
                 case 2:
-                    System.out.println("INTRODUCE EL CORREO: ");
+                    System.out.print("INTRODUCE EL CORREO: ");
                     correo = sc.next();
-                    System.out.println("INTRODUCE LA SALA: ");
+                    System.out.print("INTRODUCE LA SALA: ");
                     opcion = sc.nextInt();
-                    System.out.println("INTRODUCE LA FILA: ");
+                    System.out.print("INTRODUCE LA FILA: ");
                     fila = sc.nextInt();
-                    System.out.println("INTRODUCE LA COLUMNA: ");
+                    System.out.print("INTRODUCE LA COLUMNA: ");
                     columna = sc.nextInt();
                     cine.reservarbutacas(opcion,fila,columna,correo);
                     opcion = 2;
@@ -68,7 +68,7 @@ public class Main {
                     break;
 
                 default:
-                    System.out.println("INTRODUCE UN OPCION DE MENU VALIDA");
+                    System.out.println("\nINTRODUCE UN OPCION DE MENU VALIDA\n");
                     break;
 
             }
